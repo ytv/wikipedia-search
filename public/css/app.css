@@ -1,0 +1,123 @@
+body{
+  background: #fff;
+  font: 16px/20px Arial, Sans-Serif;
+}
+.error {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 270px auto 0 auto;
+}
+.container-fluid {
+  margin: 3% 1% 1% 1%;
+}
+.img-responsive {
+  margin: 0 auto;
+  height: 100px;
+}
+.box {
+  position: relative;
+  margin: 300px auto 300px auto;
+  width: 350px;
+  height: 50px;
+}
+.container-1 {
+  margin: auto;
+  width: 350px;
+  position: relative;
+  vertical-align: middle;
+}
+.container-1 #searchBox {
+  border: 4px solid #aaa;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  width: 350px;
+  height: 50px;
+  color: #666;
+  font-size: 18px;
+  padding-left: 43px;
+  background: #86bac3;
+
+  -webkit-transition: background .55s ease;
+  -moz-transition: background .55s ease;
+  -ms-transition: background .55s ease;
+  -o-transition: background .55s ease;
+  transition: background .55s ease;
+}
+.container-1 #searchBox::-webkit-input-placeholder {
+  color: #666;
+}
+.container-1 #searchBox::-moz-placeholder {
+  color: #666;
+}
+.container-1 #searchBox:-moz-placeholder {
+  color: #666;
+}
+.container-1 #searchBox:-ms-placeholder {
+  color: #666;
+}
+.container-1 .icon {
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 15px;
+  z-index: 100;
+  color: #666;
+}
+.container-1 input#searchBox:hover, .container-1 input#searchBox:focus, .container-1 input#searchBox:active{
+  outline: none;
+  background: #fff;
+}
+.container-2 {
+  margin-top: 8%;
+}
+.fa-random {
+  color: #3d909f;
+}
+h1 {
+  color: #444;
+}
+.resultsBox{
+  padding: 0px;
+  margin: 50px 0;
+/*   border: solid; */
+}
+.resultsHeader {
+  font-size: 24px;
+  font-weight: bold;
+}
+.imgResults {
+  min-height: 100px;
+}
+.resultLink {
+  font-size: 20px;
+  font-weight: bold;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  z: 100;
+  background: #dce1e2;
+  border-top: 2px solid #a8b4b7;
+  opacity: 0.95;
+  color: #666;
+}
+
+/**------media-----**/
+
+@media screen and (max-width: 768px) {
+  .img-responsive {
+    margin: 0 auto;
+    height: 120px;
+  }
+  .imgResults {
+    min-height: 120px;
+  }
+  .result {
+    height: 120px;
+    overflow: hidden;
+  }
+}
