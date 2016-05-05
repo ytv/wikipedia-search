@@ -36,14 +36,14 @@ var App = {
 
   _searchWiki(query) {
     $.ajax({
-      url: App.apiURL.endpoint
-        + "?action=query&format=json&prop=extracts%7Cpageimages&generator=search"
-        + "&piprop=thumbnail&pithumbsize=200&pilimit=max&callback=?"
-        + "&exsentences=" + App.apiURL.parameters.sentences
-        + "&exlimit=" + App.apiURL.parameters.limit
-        + "&exintro=" + App.apiURL.parameters.limit
-        + "&gsrlimit=" + App.apiURL.parameters.limit
-        + "&indexpageids&gsrsearch=" + query,
+      url: App.apiURL.endpoint +
+        "?action=query&format=json&prop=extracts%7Cpageimages&generator=search&piprop=thumbnail&pithumbsize=200&pilimit=max&callback=?" +
+        "&exsentences=" + App.apiURL.parameters.sentences +
+        "&exlimit=" + App.apiURL.parameters.limit +
+        "&exintro=" + App.apiURL.parameters.limit +
+        "&gsrlimit=" + App.apiURL.parameters.limit +
+        "&indexpageids&gsrsearch=" +
+        query,
       dataType: 'json',
       type: 'GET',
       headers: { 'Api-User-Agent': 'Example/1.0' },
@@ -54,7 +54,6 @@ var App = {
 
         var results = '<div class="row"><div class="col-sm-10 col-sm-offset-2"><u>Results for "' + query + '</u>":</div></div><br>';
         $(".resultsHeader").html(results);
-
         // Error handling for the search results.
         if(!data.error && data.query) {
           var pages = data.query.pages;
@@ -75,7 +74,8 @@ var App = {
           App._showResults(pageSortedByIndex, pages, query);
         }
         else {
-          var htmlText = '<div class="row"><div class="result col-sm-' + App.gridParams.colSmText + ' col-sm-offset-' + App.gridParams.colSmOffset + '">';
+          var htmlText = '<div class="row"><div class="result col-sm-' + App.gridParams.colSmText +
+            ' col-sm-offset-' + App.gridParams.colSmOffset + '">';
           htmlText += "Sorry, your search turned up no results.</div></div>"
           $(".results").append(htmlText);
         }
@@ -102,7 +102,9 @@ var App = {
         continue;
 
       // HTML setup for the thumbnail images
-      var text = '<div class="row"><div class="imgResults col-md-' + this.gridParams.colMdImg + ' col-sm-' + this.gridParams.colSmImg + ' col-xs-' + this.gridParams.colXsImg + '">';
+      var text = '<div class="row"><div class="imgResults col-md-' + this.gridParams.colMdImg +
+        ' col-sm-' + this.gridParams.colSmImg +
+        ' col-xs-' + this.gridParams.colXsImg + '">';
       // Below checks for whether a thumbnail image is available
       if(pages[pageId].thumbnail != undefined) {
         var imgSrc = "";
@@ -112,11 +114,12 @@ var App = {
       text += '</div>'; // Div for grid
 
       // HTML setup for the "text" part of the search results
-      text += '<div class="result col-md-' + this.gridParams.colMdText + ' col-sm-' + this.gridParams.colSmText + ' col-xs-' + this.gridParams.colXsText + '">';
+      text += '<div class="result col-md-' + this.gridParams.colMdText +
+        ' col-sm-' + this.gridParams.colSmText +
+        ' col-xs-' + this.gridParams.colXsText + '">';
       text += '<div class="resultTitle"><b><a class="resultLink" target="_blank" href="' + link + '">' + title + '</b></a></div>';
       text += extract;
       text += '</div></div><br><br>'; // Div for grid & row
-
       $(".results").append(text);
     }
 
