@@ -14,12 +14,12 @@ var App = {
   // The column values below are used to change change the Bootstrap grid layout
   css: {
       img: {
-          xs: 'col-xs-3',
+          xs: 'col-xs-0',
           sm: 'col-sm-2',
           md: 'col-md-2'
       },
       text: {
-          xs: 'col-xs-9',
+          xs: 'col-xs-12',
           sm: 'col-sm-10',
           md: 'col-md-10'
       },

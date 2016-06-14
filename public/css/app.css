@@ -28,10 +28,9 @@ body {
   margin: 300px auto;
   position: relative;
   width: 350px;
-
 }
 
-.moveToTopRight {
+.moveToTop {
   top: 0;
   right: 0;
   margin: 0 0 0 auto;
@@ -148,7 +147,7 @@ h1 {
 
 /* Footer */
 
-.footer {
+/*.footer {
   background: #dce1e2;
   border-top: 2px solid #a8b4b7;
   bottom: 0;
@@ -160,20 +159,32 @@ h1 {
     left: 0;
     right: 0;
   z-index: 100;
-}
+}*/
 
 /**------media-----**/
 
 @media screen and (max-width: 768px) {
-  .img-responsive {
-    height: 120px;
-    margin: 0 auto;
+  .box {
+      margin: 200px auto;
+      width: 300px;
   }
+
+  .moveToTop {
+    top: 0;
+    left: 0;
+    margin: 0 auto 0 0;
+    margin-bottom: 0;
+  }
+
+  .container-1, .container-1 #searchBox {
+      width: 300px;
+  }
+
   .imgResults {
-    min-height: 120px;
+    display: None !important;
   }
+
   .result {
-    height: 120px;
     overflow: hidden;
   }
 }
