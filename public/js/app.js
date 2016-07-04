@@ -65,7 +65,7 @@ var App = {
     App._searchWiki(query);
   },
 
-  _searchWiki(query) {
+  _searchWiki: function(query) {
     $.ajax({
       url: App.api.endpoint +
         '?action=query&format=json&prop=extracts%7Cpageimages&generator=search&piprop=thumbnail&pithumbsize=200&pilimit=max&callback=?' +
